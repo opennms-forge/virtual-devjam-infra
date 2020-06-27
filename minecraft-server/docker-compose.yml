@@ -1,3 +1,4 @@
+---
 version: '3'
 
 volumes:
@@ -15,5 +16,7 @@ services:
     volumes:
       - data-mc-forge:/data
       - ./mods:/mods:ro
+      - ./server.properties:/data/server.properties
     ports:
       - "25565:25565/tcp"
+      - "25575:25575/tcp"
