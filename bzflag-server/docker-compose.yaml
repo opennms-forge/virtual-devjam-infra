@@ -1,0 +1,10 @@
+---
+version: '3'
+
+services:
+  bzfs:
+    image: no42org/bzflag-server:2.4.18.20200324.1204
+    container_name: bzfs
+    command: [ "-d", "-d", "-d", "-p", "5154"]
+    ports:
+      - "5154:5154/udp"
