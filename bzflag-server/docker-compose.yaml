@@ -5,6 +5,10 @@ services:
   bzfs:
     image: no42org/bzflag-server:2.4.18.20200324.1204
     container_name: bzfs
-    command: [ "-d", "-d", "-d", "-p", "5140"]
+    network_mode: host
+    volumes:
+      - ./conf.txt:/conf.txt
+    command: [ "-conf", "/conf.txt"]
     ports:
-      - "5140:5140/udp"
+      - "5154:5154/udp"
+
