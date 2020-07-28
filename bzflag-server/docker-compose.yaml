@@ -9,6 +9,3 @@ services:
     volumes:
       - ./conf.txt:/conf.txt
     command: [ "-conf", "/conf.txt"]
-    ports:
-      - "5154:5154/udp"
-
